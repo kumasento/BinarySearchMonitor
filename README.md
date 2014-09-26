@@ -92,19 +92,18 @@ Let me explain this patch by patch:
   * `Val` is our target, also this one will be generated randomly
 
 2. **Running**:
-  ```
-  Testing 'regular' binary search ...
-  Inserted #(low,high)=(    0,    9) ...
-  Inserted #(low,high)=(    5,    9) ...
-  Inserted #(low,high)=(    5,    6) ...
-  Inserted #(low,high)=(    6,    6) ...
-  ```
-  
-  * First line indicates the type of binary search we are using, there are 3 of them:
-    * regular: immediately return when meets the target
-    * lowerbound: assigns `mid - 1` to `h`, and exits only if not satisfies `l <= h`
-    * upperbound: assigns `mid + 1` to `l`, and exits only if not satisfies `l <= h`
-  * Following lines will show you the whole procedure, these are useless, we will show you more visual results.
+ ```
+ Testing 'regular' binary search ...
+ Inserted #(low,high)=(    0,    9) ...
+ Inserted #(low,high)=(    5,    9) ...
+ Inserted #(low,high)=(    5,    6) ...
+ Inserted #(low,high)=(    6,    6) ...
+ ```
+ * First line indicates the type of binary search we are using, there are 3 of them:
+   * regular: immediately return when meets the target
+   * lowerbound: assigns `mid - 1` to `h`, and exits only if not satisfies `l <= h`
+   * upperbound: assigns `mid + 1` to `l`, and exits only if not satisfies `l <= h`
+ * Following lines will show you the whole procedure, these are useless, we will show you more visual results.
 
 3. **Analysis**:
   ```
@@ -116,7 +115,6 @@ Let me explain this patch by patch:
   #index=  6
   find=   66 : real=   66
   ```
-  
   * All the lists outputed are formatted like this, in the current status:
     * if the element's index is equal to the `l` value, and mark of `{l}` will be appended.
     * if the element's index is equal to the `h` value, and mark of `(h)` will be appended.
